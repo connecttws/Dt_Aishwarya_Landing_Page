@@ -1,0 +1,25 @@
+{
+  "colors": {
+    "background": "#fdfbf7",
+    "foreground": "#022c22",
+    "primary": "#0D5C46",
+    "primaryHover": "#064e3b",
+    "secondary": "#064e3b",
+    "accent": "#E0624D",
+    "accentHover": "#c84f3b",
+    "emeraldLight": "#ecfdf5",
+    "amberLight": "#fef3c7"
+  },
+  "fonts": {
+    "heading": "Plus Jakarta Sans",
+    "body": "Inter"
+  },
+  "patterns": {
+    "grid": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]",
+    "dot": "bg-[radial-gradient(rgba(13,92,70,0.15)_1.5px,transparent_1.5px)] [background-size:20px_20px]"
+  },
+  "components": {
+    "primaryCta": "group relative inline-flex items-center justify-center gap-3 rounded-full bg-[#0D5C46] hover:bg-[#064e3b] px-9 py-4 text-lg font-bold text-white shadow-xl shadow-[#0D5C46]/25 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl cursor-pointer",
+    "card": "bg-white rounded-3xl p-7 sm:p-8 shadow-xl shadow-emerald-950/5 border border-black/5 hover:border-emerald-300 transition-all duration-300"
+  }
+}

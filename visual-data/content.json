@@ -1,0 +1,103 @@
+{
+  "site": {
+    "brandName": "Aishwarya Jat",
+    "designation": "Thyroid-Focused Nutritionist",
+    "crmKey": "bcl_pub_dt_aishwarya_landing_page"
+  },
+  "hero": {
+    "headline": "Taking your thyroid medicine every day… So why do you still feel exhausted?",
+    "subheadline": "Discover how Aishwarya Jat, a Thyroid-Focused Nutritionist, helps women manage thyroid symptoms, boost their energy, and work towards healthy weight management through personalised nutrition — so they can feel like themselves again.",
+    "ctaText": "Book Your Free Consultation",
+    "stats": [
+      { "label": "1300+ women guided" },
+      { "label": "5+ years of experience" },
+      { "label": "Certified nutritionist/Thyroid-Focused Nutritionist" }
+    ],
+    "videoPlaceholder": "[ VSL VIDEO HERE ]"
+  },
+  "soundFamiliar": {
+    "title": "Sound Familiar?",
+    "symptoms": [
+      "Tired all day, even after a full night's sleep",
+      "Weight keeps climbing, no matter how clean you eat",
+      "Hair fall, dull skin and mood swings",
+      "your daily life seems like an impossible task"
+    ],
+    "empathyQuote": "You are not lazy. Your body is asking for help, and a tablet alone was never meant to answer all of it."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "your struggles, your story",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Identify",
+        "description": "Identify- what might be affecting you"
+      },
+      {
+        "step": "02",
+        "title": "PERSONALISE",
+        "description": "A personalised food and lifestyle planThat fits your life."
+      },
+      {
+        "step": "03",
+        "title": "Sustain",
+        "description": "Regular follow-ups so you are never alone."
+      }
+    ],
+    "ctaText": "Book Your Free Thyroid Consultation"
+  },
+  "meetAishwarya": {
+    "badge": "THYROID FOCUSED NUTRITIONIST",
+    "title": "Meet Aishwarya",
+    "role": "Aishwarya | Thyroid focused Nutritionist",
+    "photoPlaceholder": "[Photo]",
+    "bioParagraphs": [
+      "With 5+ years of experience, Aishwarya has helped women with thyroid, PCOS and many hormonal issues understand what their body has been trying to tell them.",
+      "She does not believe in crash diets or one-size-fits-all charts. She looks at your reports, your gut, your stress and your daily routine, then builds a plan that fits your life and your kitchen help you progress."
+    ],
+    "mission": "My mission To help every woman with thyroid feel energetic, confident and in control of her health again."
+  },
+  "testimonials": {
+    "title": "Real Women, Real Change",
+    "placeholder": "[Testimonial video or screenshot 1 / 2 / 3]",
+    "items": [
+      {
+        "id": "1",
+        "label": "Testimonial video or screenshot 1"
+      },
+      {
+        "id": "2",
+        "label": "Testimonial video or screenshot 2"
+      },
+      {
+        "id": "3",
+        "label": "Testimonial video or screenshot 3"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "FAQs",
+    "items": [
+      {
+        "question": "Do I have to stop my medicine?",
+        "answer": "No. Any change in medication is decided only with your doctor."
+      },
+      {
+        "question": "How soon will I see results?",
+        "answer": "Most women notice better energy in 3 to 6 weeks. Results vary from person to person."
+      },
+      {
+        "question": "Is the consultation really free?",
+        "answer": "Yes. Your first consultation is free, with no obligation."
+      }
+    ]
+  },
+  "finalCta": {
+    "headline": "How many more years will you live tired and frustrated?",
+    "subheadline": "Take the first step today and find out what your thyroid is really telling you.",
+    "ctaText": "Book My Free Consultation",
+    "trustNote": "Your details are 100% safe. Limited slots every week."
+  }
+}
+
