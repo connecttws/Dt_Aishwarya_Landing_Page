@@ -53,8 +53,8 @@ export const MeetAishwaryaSection: React.FC = () => {
               THYROID FOCUSED NUTRITIONIST
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2">
-              Meet <span className="text-emerald-300">Aishwarya</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2 text-white">
+              <span className="text-white">Meet</span> <span className="text-emerald-300">Aishwarya</span>
             </h2>
 
             <h3 className="text-xs sm:text-base font-semibold text-emerald-200/90 tracking-wide uppercase mb-6 mt-3">
