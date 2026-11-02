@@ -1,29 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["500", "600", "700", "800"],
-});
-
 export const metadata: Metadata = {
-  title: "Aishwarya Jat · Thyroid-Focused Nutritionist",
+  title: "Aishwarya Jat · Thyroid-Focused Nutritionist & Hormone Wellness",
   description:
-    "Discover how Aishwarya Jat, a Thyroid-Focused Nutritionist, helps women manage thyroid symptoms, boost their energy, and work towards healthy weight management through personalised nutrition.",
+    "Discover how Aishwarya Jat, a Thyroid-Focused Nutritionist, helps women manage thyroid symptoms, boost energy, and achieve healthy weight management through personalised nutrition.",
   openGraph: {
     title: "Aishwarya Jat · Thyroid-Focused Nutritionist",
     description:
-      "Discover how Aishwarya Jat helps women manage thyroid symptoms, boost their energy, and work towards healthy weight management through personalised nutrition.",
+      "Discover how Aishwarya Jat helps women manage thyroid symptoms, boost energy, and achieve sustainable weight management through personalised nutrition.",
     type: "website",
   },
   twitter: {
@@ -40,11 +26,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${plusJakartaSans.variable} scroll-smooth antialiased`}
-    >
-      <body className="bg-white text-[#415850] font-sans antialiased selection:bg-[#E8F5EF] selection:text-[#0D5C46] min-h-[100dvh] overflow-x-hidden">
+    <html lang="en" className="scroll-smooth antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-wellness-100 selection:text-wellness-900 overflow-x-hidden">
         {children}
         <Script
           src="/crm-lead-tracker.js"
@@ -55,4 +50,3 @@ export default function RootLayout({
     </html>
   );
 }
-

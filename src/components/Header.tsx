@@ -9,37 +9,37 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
   return (
-    <header className="sticky top-0 z-40 bg-[#fdfbf7]/95 backdrop-blur-md border-b border-black/5 transition-all">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 md:h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-wellness-50/90 backdrop-blur-md border-b border-wellness-200/50 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex justify-between items-center gap-2">
         {/* Brand / Logo */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full bg-gradient-to-br from-[#064e3b] to-[#0D5C46] text-white flex items-center justify-center font-bold text-sm sm:text-base md:text-lg shadow-sm border border-emerald-400/20 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-wellness-800 text-white flex items-center justify-center font-heading font-extrabold text-sm sm:text-base shadow-sm shrink-0 border border-wellness-600/30">
             AJ
           </div>
           <div>
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="font-bold text-base sm:text-lg md:text-xl text-[#022c22] tracking-tight leading-none">
-                Aishwarya Jat
+              <span className="font-heading font-bold text-base sm:text-xl md:text-2xl tracking-tight text-wellness-900">
+                Aishwarya <span className="text-earth-500">Jat</span>
               </span>
-              <span className="hidden sm:inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-[#064e3b] bg-emerald-100/60 px-2 py-0.5 rounded-full border border-emerald-200">
-                <ShieldCheck className="w-3 h-3 text-[#064e3b]" />
+              <span className="hidden min-[480px]:inline-flex items-center gap-1 text-[10px] font-bold text-wellness-800 bg-wellness-200/60 px-2 py-0.5 rounded-full border border-wellness-300/50">
+                <ShieldCheck className="w-3 h-3 text-wellness-700" />
                 Certified
               </span>
             </div>
-            <p className="text-[11px] sm:text-xs text-[#022c22]/70 font-medium tracking-wide leading-tight mt-0.5">
+            <p className="text-[11px] sm:text-xs text-wellness-700/80 font-medium tracking-wide">
               Thyroid-Focused Nutritionist
             </p>
           </div>
         </div>
 
-        {/* Header Right Action */}
+        {/* Right CTA */}
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={onOpenBooking}
-            className="inline-flex items-center gap-1 sm:gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2.5 bg-[#064e3b] hover:bg-[#022c22] text-white font-semibold text-xs sm:text-sm rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer active:scale-95"
+            className="inline-flex items-center justify-center text-center whitespace-nowrap bg-wellness-800 hover:bg-wellness-900 text-white px-3 sm:px-5 py-1.5 sm:py-2.5 text-xs sm:text-sm rounded-full font-semibold transition-transform hover:scale-105 active:scale-95 shadow-md shadow-wellness-800/30 cursor-pointer"
           >
-            <span>Book Consultation</span>
-            <ArrowRight className="w-3.5 h-3.5 hidden sm:inline-block" />
+            <span>Book Free Consultation</span>
+            <ArrowRight className="w-3.5 h-3.5 ml-1.5 hidden sm:inline-block" />
           </button>
         </div>
       </div>

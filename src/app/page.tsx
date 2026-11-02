@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { TrustStrip } from "@/components/TrustStrip";
 import { SoundFamiliarSection } from "@/components/SoundFamiliarSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { MeetAishwaryaSection } from "@/components/MeetAishwaryaSection";
@@ -26,43 +25,40 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-[100dvh] bg-[#fdfbf7] text-[#022c22] font-sans antialiased selection:bg-emerald-100 selection:text-[#064e3b] flex flex-col overflow-x-hidden pb-16 md:pb-0">
+    <main className="min-h-screen bg-background text-foreground font-sans antialiased flex flex-col overflow-x-hidden pb-16 md:pb-0">
       {/* 1. Header with branding & CTA */}
       <Header onOpenBooking={handleOpenBooking} />
 
       <div className="flex-1">
-        {/* 2. Hero Section: Headline, Subheadline, Rotating Conic Gradient Badges, [ VSL VIDEO HERE ], Book Your Free Consultation */}
+        {/* 2. Hero Section: Headline, Subheadline, [ VSL VIDEO HERE ], Book Your Free Consultation, Badges */}
         <HeroSection onOpenBooking={handleOpenBooking} />
 
-        {/* 3. Meenakshi Style Infinite Trust Strip Marquee */}
-        <TrustStrip />
-
-        {/* 4. Sound Familiar: Symptoms with Organic Decor & Empathy Validation Box */}
+        {/* 3. Sound Familiar: Symptoms & Empathy statement */}
         <SoundFamiliarSection />
 
-        {/* 5. How It Works: 01 Identify, 02 PERSONALISE, 03 Sustain + CTA */}
+        {/* 4. How It Works: your struggles, your story (01 Identify, 02 PERSONALISE, 03 Sustain) + CTA */}
         <HowItWorksSection onOpenBooking={handleOpenBooking} />
 
-        {/* 6. Meet Aishwarya: Dark Emerald Aesthetic, Photo Frame, 5+ Yrs Bio & Mission */}
+        {/* 5. Meet Aishwarya: THYROID FOCUSED NUTRITIONIST, [Photo], Bio, Mission */}
         <MeetAishwaryaSection />
 
-        {/* 7. Real Women, Real Change: [Testimonial video or screenshot 1 / 2 / 3] */}
+        {/* 6. Real Women, Real Change: [Testimonial video or screenshot 1 / 2 / 3] */}
         <TestimonialsSection />
 
-        {/* 8. FAQs: Accordion for 3 exact FAQs */}
+        {/* 7. FAQs: 3 Exact FAQs */}
         <FaqSection />
 
-        {/* 9. Final Urgency Callout & CTA */}
+        {/* 8. Final Urgency CTA: How many more years will you live tired and frustrated? */}
         <FinalCtaSection onOpenBooking={handleOpenBooking} />
       </div>
 
-      {/* 10. Footer */}
+      {/* 9. Footer */}
       <Footer />
 
-      {/* 11. Sticky Bottom Bar on Mobile */}
+      {/* 10. Sticky Bottom Bar on Mobile */}
       <StickyBottomBar onOpenBooking={handleOpenBooking} />
 
-      {/* 12. Interactive Consultation Booking Modal */}
+      {/* 11. Interactive Consultation Booking Modal with CRM Lead Tracker */}
       <BookingModal isOpen={isBookingOpen} onClose={handleCloseBooking} />
     </main>
   );

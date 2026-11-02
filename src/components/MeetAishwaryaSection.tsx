@@ -1,67 +1,57 @@
 "use client";
 
 import React from "react";
-import { Award, Compass, ShieldCheck, UserCheck } from "lucide-react";
+import { Compass, UserCheck } from "lucide-react";
+import { WaveDivider } from "./WaveDivider";
 
 export const MeetAishwaryaSection: React.FC = () => {
   return (
-    <section className="py-12 md:py-20 bg-[#043326] relative overflow-hidden text-white">
-      {/* Meenakshi CoachProfileSection Background Decor */}
-      <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-800/30 via-transparent to-transparent opacity-80 z-0 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-16 md:py-24 px-4 sm:px-6 bg-earth-50 relative overflow-hidden">
+      {/* Decorative ambient background glows from Aditi Vision section */}
+      <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-wellness-200 rounded-full filter blur-[128px] opacity-50 pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-earth-300 rounded-full filter blur-[128px] opacity-40 pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          {/* Photo Placeholder Area matching Meenakshi profile frame */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-[2.5rem] bg-emerald-900/40 border border-emerald-700/40 overflow-hidden shadow-2xl flex flex-col items-center justify-center p-8 group text-center">
-              {/* Photo Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" />
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
+          {/* Photo Frame Column */}
+          <div className="w-full lg:w-5/12 flex justify-center">
+            <div className="relative w-full max-w-sm aspect-[4/5] rounded-[2.5rem] bg-gradient-to-b from-white to-wellness-50 border-4 border-white shadow-2xl overflow-hidden flex flex-col items-center justify-center p-6 text-center group">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-wellness-200)_0%,_transparent_70%)] opacity-40 pointer-events-none" />
 
-              {/* Decorative radial pattern */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 to-transparent pointer-events-none" />
-
-              <div className="relative z-20 flex flex-col items-center">
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white/10 backdrop-blur-md border-2 border-emerald-400/30 flex items-center justify-center mb-5 shadow-xl">
-                  <UserCheck className="w-16 h-16 text-emerald-200" />
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-wellness-100 border-4 border-white flex items-center justify-center mb-4 shadow-md text-wellness-800">
+                  <UserCheck className="w-14 h-14" />
                 </div>
 
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold text-emerald-200 mb-3 border border-white/20">
-                  <ShieldCheck className="w-3.5 h-3.5" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-wellness-200/70 text-xs font-bold text-wellness-900 mb-2 border border-wellness-300/60">
                   <span>[Photo]</span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                  Aishwarya Jat
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+                  Aishwarya
                 </h3>
-                <p className="text-sm text-emerald-300 font-medium mt-1">
-                  Thyroid-Focused Nutritionist
+                <p className="text-xs sm:text-sm text-earth-500 font-semibold mt-0.5">
+                  Thyroid focused Nutritionist
                 </p>
-              </div>
-
-              {/* Experience Ribbon */}
-              <div className="absolute bottom-5 left-5 right-5 z-20 bg-emerald-950/80 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-emerald-600/30 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 shadow-lg">
-                <Award className="w-4 h-4 text-emerald-400" />
-                <span>5+ Years Experience | Personalised Clinical Care</span>
               </div>
             </div>
           </div>
 
-          {/* Text Content Area */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
-            <div className="inline-block px-3.5 py-1 rounded-full bg-emerald-800/60 border border-emerald-600/40 text-emerald-300 text-xs sm:text-sm font-bold tracking-wider uppercase mb-4">
+          {/* Text & Mission Column */}
+          <div className="w-full lg:w-7/12 text-center lg:text-left">
+            <span className="inline-block px-4 py-1 rounded-full bg-wellness-100 text-wellness-800 font-bold text-xs uppercase tracking-wider border border-wellness-200 mb-3">
               THYROID FOCUSED NUTRITIONIST
-            </div>
+            </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-2 text-white">
-              <span className="text-white">Meet</span> <span className="text-emerald-300">Aishwarya</span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-2">
+              Meet Aishwarya
             </h2>
 
-            <h3 className="text-xs sm:text-base font-semibold text-emerald-200/90 tracking-wide uppercase mb-6 mt-3">
+            <p className="text-sm sm:text-base font-semibold text-wellness-700 uppercase tracking-wider mb-6">
               Aishwarya | Thyroid focused Nutritionist
-            </h3>
+            </p>
 
-            <div className="space-y-5 text-white/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <div className="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               <p>
                 With 5+ years of experience, Aishwarya has helped women with thyroid, PCOS and many hormonal issues understand what their body has been trying to tell them.
               </p>
@@ -70,18 +60,18 @@ export const MeetAishwaryaSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Mission Statement Box */}
-            <div className="mt-8 pt-8 border-t border-emerald-800/50">
-              <div className="bg-white/5 rounded-2xl border border-white/10 p-5 sm:p-6 backdrop-blur-xs text-left">
-                <div className="flex items-start gap-3.5">
-                  <div className="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+            {/* Mission Box */}
+            <div className="mt-8">
+              <div className="bg-white/80 backdrop-blur-md border border-wellness-200 p-6 sm:p-7 rounded-3xl shadow-md relative text-left">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-2xl bg-wellness-100 text-wellness-700 flex items-center justify-center shrink-0 mt-1 shadow-xs">
                     <Compass className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-emerald-300 uppercase tracking-wider mb-1">
-                      My Mission
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-earth-500 mb-1">
+                      My mission
                     </h4>
-                    <p className="text-base sm:text-lg font-bold text-white leading-snug">
+                    <p className="font-heading text-lg sm:text-xl font-bold text-slate-900 leading-snug">
                       To help every woman with thyroid feel energetic, confident and in control of her health again.
                     </p>
                   </div>
@@ -91,6 +81,8 @@ export const MeetAishwaryaSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <WaveDivider fillClass="fill-white" />
     </section>
   );
 };

@@ -1,78 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfbf7;
-  --foreground: #022c22;
-  --primary: #0D5C46;
-  --primary-foreground: #ffffff;
-  --secondary: #064e3b;
-  --secondary-foreground: #ffffff;
-  --accent: #E0624D;
-  --accent-foreground: #ffffff;
+  --background: #faf7f2;
+  --foreground: #253d37;
+  --footer-bg: #e0eee8;
+  --footer-text: #111827;
+
+  --tw-wellness-50: #f2f7f5;
+  --tw-wellness-100: #e0eee8;
+  --tw-wellness-200: #c2ddd2;
+  --tw-wellness-300: #9bc6b5;
+  --tw-wellness-400: #71ab96;
+  --tw-wellness-500: #518e78;
+  --tw-wellness-600: #3f7060;
+  --tw-wellness-700: #345a4e;
+  --tw-wellness-800: #2b4941;
+  --tw-wellness-900: #253d37;
+  --tw-wellness-950: #1b2e29;
+
+  --tw-earth-50: #faf7f2;
+  --tw-earth-100: #f2ebe0;
+  --tw-earth-200: #e5d5c0;
+  --tw-earth-300: #d4ba9b;
+  --tw-earth-400: #c49d76;
+  --tw-earth-500: #b48157;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-footer-bg: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
 
-  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: var(--font-plus-jakarta-sans), system-ui, -apple-system, sans-serif;
+  --color-wellness-50: var(--tw-wellness-50);
+  --color-wellness-100: var(--tw-wellness-100);
+  --color-wellness-200: var(--tw-wellness-200);
+  --color-wellness-300: var(--tw-wellness-300);
+  --color-wellness-400: var(--tw-wellness-400);
+  --color-wellness-500: var(--tw-wellness-500);
+  --color-wellness-600: var(--tw-wellness-600);
+  --color-wellness-700: var(--tw-wellness-700);
+  --color-wellness-800: var(--tw-wellness-800);
+  --color-wellness-900: var(--tw-wellness-900);
+  --color-wellness-950: var(--tw-wellness-950);
+
+  --color-earth-50: var(--tw-earth-50);
+  --color-earth-100: var(--tw-earth-100);
+  --color-earth-200: var(--tw-earth-200);
+  --color-earth-300: var(--tw-earth-300);
+  --color-earth-400: var(--tw-earth-400);
+  --color-earth-500: var(--tw-earth-500);
+
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
-@layer base {
-  html {
-    font-family: var(--font-sans);
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--foreground);
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-    overflow-x: hidden;
-  }
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Custom background patterns matching Meenakshi style */
-.bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(16, 185, 129, 0.07) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
-  background-size: 40px 40px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
-.bg-dot-pattern {
-  background-image: radial-gradient(rgba(13, 92, 70, 0.15) 1.5px, transparent 1.5px);
-  background-size: 20px 20px;
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Floating animation */
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #345a4e, #518e78);
+}
+
+.text-shine-red {
+  background: linear-gradient(
+    105deg,
+    #991b1b 0%,
+    #f43f5e 30%,
+    #fde047 50%,
+    #f43f5e 70%,
+    #991b1b 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine-red-anim 4s ease-in-out infinite;
+}
+
+@keyframes shine-red-anim {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    transform: translateY(-16px) rotate(4deg);
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-@keyframes float-reverse {
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@keyframes move-lr {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateX(-8px);
   }
   50% {
-    transform: translateY(18px) rotate(-6deg);
+    transform: translateX(8px);
   }
+}
+
+.animate-move-lr {
+  animation: move-lr 4s ease-in-out infinite;
 }
 
 @keyframes marquee {
@@ -84,32 +147,24 @@
   }
 }
 
-.animate-float-slow {
-  animation: float-slow 7s ease-in-out infinite;
-}
-
-.animate-float-reverse {
-  animation: float-reverse 9s ease-in-out infinite;
-}
-
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
-/* Delicate scrollbar */
+/* Custom delicate scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #fdfbf7;
+  background: #faf7f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C2DFD4;
+  background: #c2ddd2;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0D5C46;
+  background: #518e78;
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, HeartHandshake, Users, Award, ShieldCheck } from "lucide-react";
-import { VslPlayer } from "./VslPlayer";
+import { Users, Award, ShieldCheck, Play, ArrowRight } from "lucide-react";
+import { WaveDivider } from "./WaveDivider";
 
 interface HeroSectionProps {
   onOpenBooking: () => void;
@@ -10,121 +10,95 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
   return (
-    <section className="relative overflow-hidden bg-[#fdfbf7] pt-3 sm:pt-6 md:pt-10 pb-10 sm:pb-16 md:pb-20">
-      {/* Meenakshi Background Design Decor */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
+    <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 md:pb-24 px-4 sm:px-6 overflow-hidden min-h-[90vh] flex flex-col justify-center items-center bg-[#faf7f2]">
+      {/* Background Radial Glow like Aditi */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--color-wellness-200)_0%,_transparent_55%)] opacity-60 pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-earth-200/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-        {/* Top Left Green Gradient */}
-        <div className="absolute top-0 left-0 w-full h-[500px] sm:h-[600px] bg-gradient-to-br from-emerald-100/50 via-transparent to-transparent opacity-80 blur-3xl" />
-
-        {/* Top Right Amber/Gold Gradient */}
-        <div className="absolute top-10 sm:top-20 right-0 w-[260px] sm:w-[400px] md:w-[500px] h-[260px] sm:h-[400px] md:h-[500px] bg-amber-100/40 rounded-full blur-3xl" />
-
-        {/* Floating Abstract Shapes */}
-        <div className="absolute top-28 left-[6%] w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-emerald-500/10 bg-gradient-to-br from-emerald-50 to-transparent animate-float-slow hidden sm:block" />
-        <div className="absolute bottom-16 right-[8%] w-24 h-24 sm:w-32 sm:h-32 rounded-3xl border border-amber-500/10 bg-gradient-to-bl from-amber-50 to-transparent transform rotate-12 animate-float-reverse hidden sm:block" />
-      </div>
-
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="mx-auto max-w-4xl text-center">
-          {/* Eyebrow Pill with minimal top gap */}
-          <div className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200/80 text-[11px] sm:text-xs font-semibold text-[#064e3b] mb-2.5 sm:mb-4 shadow-2xs">
-            <HeartHandshake className="w-3.5 h-3.5 text-[#064e3b]" />
-            <span>Women's Endocrine & Thyroid Wellness</span>
-          </div>
-
-          {/* Exact Headline Styled for Mobile & Desktop Impact */}
-          <h1 className="text-center mx-auto max-w-4xl mb-4 sm:mb-6 font-extrabold tracking-tight">
-            {/* Part 1: Taking your thyroid */}
-            <span className="block text-2xl min-[360px]:text-[1.85rem] min-[400px]:text-[2.1rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] text-[#022c22] leading-tight">
-              Taking your thyroid
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <div className="space-y-4 sm:space-y-5 flex flex-col items-center animate-fade-in-up w-full">
+          {/* Main Headline */}
+          <h1 className="font-heading text-2xl min-[360px]:text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-balance">
+            <span className="block text-wellness-900 leading-tight">
+              Taking your thyroid medicine every day…
             </span>
-
-            {/* Part 2: medicine every day... together */}
-            <span className="inline-block mt-1 sm:mt-2">
-              <span className="inline-flex items-center text-2xl min-[360px]:text-[1.85rem] min-[400px]:text-[2.1rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-[#064e3b] px-3.5 sm:px-4 py-0.5 rounded-2xl bg-emerald-100/70 border border-emerald-200/80 shadow-2xs leading-tight">
-                medicine every day…
-              </span>
-            </span>
-
-            {/* Part 3: So why do you still feel exhausted? */}
-            <span className="block text-[1.85rem] min-[360px]:text-[2.05rem] min-[400px]:text-[2.3rem] sm:text-4xl md:text-5xl lg:text-[3.4rem] font-black text-[#022c22] mt-2.5 sm:mt-4 leading-[1.2] sm:leading-[1.15]">
+            <span className="block mt-2 font-extrabold text-wellness-950 leading-tight">
               So why do you{" "}
-              <span className="relative inline-block text-[#0D5C46]">
+              <span className="text-shine-red inline-block">
                 still feel exhausted?
-                {/* Hand-drawn accent swoop underline in warm coral */}
-                <svg
-                  className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2.5 sm:h-3.5 text-[#E0624D] overflow-visible pointer-events-none"
-                  viewBox="0 0 240 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 11C60 3 180 3 237 11"
-                    stroke="currentColor"
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
               </span>
             </span>
           </h1>
 
-          {/* Exact Subheadline */}
-          <p className="mt-3 sm:mt-5 text-[13px] min-[360px]:text-sm sm:text-base md:text-lg leading-relaxed sm:leading-8 text-[#022c22]/80 font-normal sm:font-medium max-w-2xl sm:max-w-3xl mx-auto px-1 sm:px-0">
-            Discover how{" "}
-            <strong className="font-bold text-[#022c22]">Aishwarya Jat</strong>, a{" "}
-            <span className="text-[#064e3b] font-semibold underline decoration-emerald-300 decoration-2 underline-offset-2">Thyroid-Focused Nutritionist</span>,
-            helps women manage thyroid symptoms, boost their energy, and work towards healthy weight management through personalised nutrition — so they can feel like themselves again.
+          {/* Subheadline */}
+          <p className="mt-3 text-sm sm:text-base md:text-lg text-slate-700 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed font-normal">
+            Discover how <strong className="font-bold text-wellness-950">Aishwarya Jat</strong>, a{" "}
+            <span className="text-wellness-700 font-semibold underline decoration-wellness-400 decoration-2 underline-offset-2">
+              Thyroid-Focused Nutritionist
+            </span>
+            , helps women manage thyroid symptoms, boost their energy, and work towards healthy weight management through personalised nutrition — so they can feel like themselves again.
           </p>
 
-          {/* 1. VSL Video (Moved Up) */}
-          <div className="mt-6 sm:mt-8">
-            <VslPlayer onOpenBooking={onOpenBooking} />
+          {/* VSL Video Container */}
+          <div className="w-full max-w-3xl relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-video bg-black mx-auto group mt-4 md:mt-6">
+            <div
+              className="absolute inset-0 w-full h-full cursor-pointer z-10 flex flex-col items-center justify-center p-4 sm:p-8 bg-gradient-to-br from-wellness-900 via-wellness-800 to-wellness-950 text-white select-none"
+              onClick={onOpenBooking}
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-wellness-500)_0%,_transparent_70%)] opacity-20 pointer-events-none" />
+
+              <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold text-wellness-100">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+                <span>[ VSL VIDEO HERE ]</span>
+              </div>
+
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-wellness-600/90 hover:bg-wellness-500 rounded-full flex items-center justify-center backdrop-blur-sm shadow-xl shadow-wellness-900/40 transition-transform group-hover:scale-110 mb-4">
+                <Play className="w-7 h-7 sm:w-8 sm:h-8 text-white ml-1 fill-white" />
+              </div>
+
+              <p className="text-xs sm:text-sm text-wellness-200/90 font-medium">
+                Click to book consultation
+              </p>
+            </div>
           </div>
 
-          {/* 2. Hero CTA Button (Moved Up) */}
-          <div className="mt-6 sm:mt-8 flex flex-col items-center justify-center gap-3">
+          {/* CTA Button: Book Your Free Consultation */}
+          <div className="pt-6 sm:pt-8 pb-3">
             <button
               onClick={onOpenBooking}
-              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#0D5C46] hover:bg-[#064e3b] px-8 sm:px-10 py-3.5 sm:py-4.5 text-base sm:text-lg font-bold text-white shadow-xl shadow-[#0D5C46]/25 transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0D5C46]/35 active:translate-y-0 cursor-pointer active:scale-95"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[4px] shadow-2xl shadow-red-800/40 transition-all hover:scale-[1.02] hover:shadow-red-800/60 animate-bounce bg-white cursor-pointer"
             >
-              <span>Book Your Free Consultation</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 rounded-full ring-2 ring-[#0D5C46] ring-offset-2 ring-offset-[#fdfbf7] opacity-0 transition-opacity group-hover:opacity-100" />
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_85%,#ef4444_100%)]" />
+              <span className="relative flex items-center justify-center gap-2 rounded-full bg-red-800 hover:bg-red-900 px-8 sm:px-12 py-3.5 sm:py-5 font-bold text-white transition-all w-full h-full text-base sm:text-lg md:text-xl whitespace-nowrap">
+                <span>Book Your Free Consultation</span>
+                <ArrowRight className="w-5 h-5 ml-1" />
+                <div className="absolute inset-0 bg-white/20 translate-x-[-150%] group-hover:translate-x-[150%] transition-transform duration-1000 skew-x-[-20deg] rounded-full overflow-hidden pointer-events-none" />
+              </span>
             </button>
           </div>
 
-          {/* 3. 1300+ women guided | 5+ years of experience | Certified nutritionist/Thyroid-Focused Nutritionist (Below CTA) */}
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 text-xs sm:text-sm font-semibold text-[#064e3b] w-full max-w-4xl mx-auto">
-            <div className="relative flex flex-1 w-full sm:w-auto overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex flex-1 flex-row items-center justify-center gap-2 bg-white/95 backdrop-blur px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <Users className="w-4 h-4 text-[#0D5C46] shrink-0" />
-                <span>1300+ women guided</span>
-              </div>
+          {/* Exact Badges: 1300+ women guided | 5+ years of experience | Certified nutritionist/Thyroid-Focused Nutritionist */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-4xl mx-auto mt-4 text-xs sm:text-sm font-semibold text-wellness-900">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md shadow-sm border border-wellness-200/80">
+              <Users className="w-4 h-4 text-wellness-700" />
+              <span>1300+ women guided</span>
             </div>
-
-            <div className="relative flex flex-1 w-full sm:w-auto overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex flex-1 flex-row items-center justify-center gap-2 bg-white/95 backdrop-blur px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <Award className="w-4 h-4 text-[#0D5C46] shrink-0" />
-                <span>5+ years of experience</span>
-              </div>
+            <span className="hidden sm:inline text-wellness-300">•</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md shadow-sm border border-wellness-200/80">
+              <Award className="w-4 h-4 text-wellness-700" />
+              <span>5+ years of experience</span>
             </div>
-
-            <div className="relative flex flex-1 w-full sm:w-auto overflow-hidden rounded-xl sm:rounded-full p-[1.5px] shadow-sm">
-              <div className="absolute left-1/2 top-1/2 aspect-square w-[250%] -translate-x-1/2 -translate-y-1/2 animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#10b981_50%,transparent_100%)] opacity-80" />
-              <div className="relative flex flex-1 flex-row items-center justify-center gap-2 bg-white/95 backdrop-blur px-4 py-2 sm:py-2.5 rounded-[10px] sm:rounded-full text-center leading-tight h-full w-full">
-                <ShieldCheck className="w-4 h-4 text-[#0D5C46] shrink-0" />
-                <span>Certified nutritionist/Thyroid-Focused Nutritionist</span>
-              </div>
+            <span className="hidden sm:inline text-wellness-300">•</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/95 backdrop-blur-md shadow-sm border border-wellness-200/80">
+              <ShieldCheck className="w-4 h-4 text-wellness-700" />
+              <span>Certified nutritionist/Thyroid-Focused Nutritionist</span>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Wave Section Divider */}
+      <WaveDivider fillClass="fill-white" />
     </section>
   );
 };

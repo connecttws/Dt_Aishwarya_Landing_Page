@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Moon, TrendingUp, Sparkles, AlertCircle, Heart } from "lucide-react";
+import { Moon, TrendingUp, AlertCircle, Sparkles, Heart } from "lucide-react";
+import { WaveDivider } from "./WaveDivider";
 
 export const SoundFamiliarSection: React.FC = () => {
   const symptoms = [
@@ -24,61 +25,56 @@ export const SoundFamiliarSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white relative overflow-hidden">
-      {/* Meenakshi AboutSection Background Decor */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-emerald-50/40 rounded-l-[100px] -z-10 transform translate-x-1/4 lg:translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-50/70 rounded-full blur-3xl -z-10 opacity-60 transform -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+    <section className="py-16 md:py-24 px-4 sm:px-6 relative bg-white overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="bg-wellness-50 rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 shadow-xl border border-wellness-100 text-center relative overflow-hidden">
+          {/* Decorative Background Accents like Aditi */}
+          <div className="absolute top-0 right-0 w-72 h-72 bg-wellness-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-earth-200/40 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
-      <div className="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <span className="inline-block px-4 py-1 rounded-full bg-emerald-100/70 text-[#064e3b] font-semibold text-xs sm:text-sm mb-3 border border-emerald-200/60">
-            Daily Reality
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#064e3b] mb-4">
-            Sound Familiar?
-          </h2>
-          <div className="h-1 w-20 bg-[#0D5C46] rounded-full mx-auto" />
-        </div>
+          <div className="relative z-10 space-y-4 md:space-y-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+              Sound Familiar?
+            </h2>
 
-        {/* Symptoms 4-Card Grid with Meenakshi card styling */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-12">
-          {symptoms.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 shadow-lg shadow-emerald-950/5 border border-gray-100/90 hover:border-emerald-300 transition-all duration-300 flex items-start gap-4.5 group hover:-translate-y-0.5"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center shrink-0 group-hover:bg-[#0D5C46] group-hover:text-white transition-colors duration-300 text-[#0D5C46] shadow-2xs border border-gray-100 group-hover:border-[#0D5C46]">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1 pt-1">
-                  <p className="text-base sm:text-lg font-semibold text-[#022c22] leading-snug group-hover:text-[#064e3b] transition-colors">
-                    {item.text}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-wellness-400 to-earth-400 mx-auto rounded-full my-6" />
 
-        {/* Empathy Statement Callout Box */}
-        <div className="relative rounded-[2rem] bg-gradient-to-r from-[#064e3b] to-[#0D5C46] p-7 sm:p-11 text-white text-center shadow-2xl overflow-hidden border border-emerald-800/40">
-          {/* Dot matrix background pattern from Meenakshi */}
-          <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-[radial-gradient(rgba(255,255,255,0.15)_1.5px,transparent_1.5px)] [background-size:16px_16px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 -mb-4 -ml-4 w-32 h-32 bg-[radial-gradient(rgba(255,255,255,0.15)_1.5px,transparent_1.5px)] [background-size:16px_16px] pointer-events-none" />
-
-          <div className="relative max-w-3xl mx-auto flex flex-col items-center">
-            <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-4 text-emerald-200 border border-white/20">
-              <Heart className="w-6 h-6 fill-current" />
+            {/* 4 Symptoms Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-2 text-left">
+              {symptoms.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-4 bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-wellness-200 transition-all duration-300"
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-wellness-100 flex items-center justify-center text-wellness-700">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <p className="text-base sm:text-lg text-slate-800 font-semibold leading-snug">
+                      {item.text}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-            <p className="text-lg sm:text-xl md:text-2xl font-bold leading-relaxed tracking-tight text-white/95">
-              “You are not lazy. Your body is asking for help, and a tablet alone was never meant to answer all of it.”
-            </p>
+
+            {/* Exact Empathy Statement */}
+            <div className="mt-8 pt-4">
+              <div className="bg-white/90 backdrop-blur-sm border border-wellness-200/80 p-6 sm:p-8 rounded-2xl shadow-sm max-w-3xl mx-auto text-center relative overflow-hidden">
+                <div className="w-10 h-10 rounded-full bg-wellness-100 text-wellness-700 flex items-center justify-center mx-auto mb-3">
+                  <Heart className="w-5 h-5 fill-current" />
+                </div>
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-wellness-950 leading-relaxed">
+                  “You are not lazy. Your body is asking for help, and a tablet alone was never meant to answer all of it.”
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <WaveDivider fillClass="fill-wellness-50" />
     </section>
   );
 };
