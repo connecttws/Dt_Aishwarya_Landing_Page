@@ -24,8 +24,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
             </span>
             <span className="block mt-2 font-extrabold text-wellness-950 leading-tight">
               So why do you{" "}
-              <span className="text-shine-red inline-block">
-                still feel exhausted?
+              <span className="relative inline-block text-wellness-950">
+                <span className="relative z-10 italic px-1 bg-earth-100/50 rounded-lg">
+                  still feel exhausted?
+                </span>
+                {/* Hand-drawn curved underline accent */}
+                <svg
+                  className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-2.5 sm:h-3.5 text-earth-500 pointer-events-none"
+                  viewBox="0 0 260 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M2 11C45 3.5 175 2.5 258 9"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M15 14C70 8 190 7 245 13"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    opacity="0.6"
+                  />
+                </svg>
               </span>
             </span>
           </h1>
